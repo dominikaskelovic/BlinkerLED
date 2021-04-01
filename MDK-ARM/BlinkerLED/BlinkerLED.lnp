@@ -1,0 +1,15 @@
+--cpu Cortex-M3
+"blinkerled\startup_stm32f103xb.o"
+"blinkerled\main.o"
+"blinkerled\stm32f1xx_it.o"
+"blinkerled\stm32f1xx_ll_gpio.o"
+"blinkerled\stm32f1xx_ll_pwr.o"
+"blinkerled\stm32f1xx_ll_exti.o"
+"blinkerled\stm32f1xx_ll_rcc.o"
+"blinkerled\stm32f1xx_ll_utils.o"
+"blinkerled\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "BlinkerLED\BlinkerLED.sct"
+
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "BlinkerLED.map" -o BlinkerLED\BlinkerLED.axf
